@@ -1,5 +1,8 @@
 <?php
 
+/*
+* Author: Jeremy Blanchard auzigog@gmail.com
+*/
 
 class PivotalTracker {
 	
