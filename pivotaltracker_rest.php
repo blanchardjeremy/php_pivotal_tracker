@@ -53,6 +53,28 @@ class PivotalTracker {
 		return $stories;
 	}
 	
+	function stories_get_by_filter($project_id, $filter) {
+		$function = 'projects/'.$project_id.'/stories?filter=';
+		$function .= urlencode($filter);
+		
+		$arr = $this->_execute($function);
+		$stories = $arr['stories']['story'];
+		return $stories;
+	}
+	
+	/**
+	* $project_id
+	* $group = done, current, backlog, null 
+	*/
+	function iterations_get($project_id, $group = null) {
+		$function = 'projects/'.$project_id.'/iterations';
+		if(!empty($group))
+			$function .= '/'.$group;
+		
+		$arr = $this->_execute($function);
+		$iterations = $arr['iterations']['iteration'];
+		return $iterations;
+	}
 	
 	
 	function _execute($function, $vars=null, $method='GET') {
