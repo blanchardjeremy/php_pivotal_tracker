@@ -2,14 +2,16 @@ Author: Jeremy Blanchard
 
 Email: auzigog@gmail.com
 
+License: Use it. :)
+
 ### Introduction
 php_pivotal_tracker is currently a bare-bones implementation of the Pivotal Tracker API in PHP.
 
-It has the core features to do 
+It has the core features to do function calls using CURL for requests.
 
 Please send pull requests if you make any additions for projects you have.
 
-The code has not been extensively tested.
+The code has not been extensively tested. Use at your own risk.
 
 ### TODO
 *   Error handling (internally and over REST)
