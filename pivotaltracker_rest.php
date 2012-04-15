@@ -49,7 +49,12 @@ class PivotalTracker {
 			$function = $function.'/'.$story_id;
 		
 		$arr = $this->_execute($function);
-		$stories = $arr['stories']['story'];
+		
+		if(!empty($story_id)) {
+			$stories = $arr['story'];
+		}else{
+			$stories = $arr['stories']['story'];
+		}
 		return $stories;
 	}
 	
@@ -76,6 +81,14 @@ class PivotalTracker {
 		return $iterations;
 	}
 	
+	function activity_get($project_id = null) {
+		$function = 'activities';
+		if(!empty($project_id))
+			$function = 'projects/'.$project_id.'/'.$function;
+			
+		$arr = $this->_execute($function);
+		return $arr;
+	}
 	
 	function _execute($function, $vars=null, $method='GET') {
 		if(empty($this->rest)) {
