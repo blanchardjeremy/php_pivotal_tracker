@@ -154,7 +154,7 @@ class PivotalTrackerREST {
 	
 	function _store_authentication($token_arr) {
 		$this->token = $token_arr['token']['guid'];
-		$this->user_id = $toke_arr['token']['id'];
+		$this->user_id = $token_arr['token']['id'];
 	}
 	
 	function _execute($function, $vars=null, $method='GET', $auth=null) {
