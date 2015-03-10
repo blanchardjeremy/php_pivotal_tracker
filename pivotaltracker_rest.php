@@ -16,7 +16,7 @@
 define('PTR_BASE', './'); // If you need an absolute path, use this to prepend
 
 require_once(PTR_BASE.'interfaces/iPivotalTracker.interface.php');
-require_once(PTR_BASE.'interfaces/iPivotalTracker.interface.php');
+require_once(PTR_BASE.'interfaces/iPivotalTrackerRest.interface.php');
 
 require_once(PTR_BASE.'classes/PivotalTracker.class.php');
 require_once(PTR_BASE.'classes/PivotalTrackerRest.class.php');

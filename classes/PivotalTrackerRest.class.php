@@ -122,7 +122,7 @@ class PivotalTrackerREST implements iPivotalTrackerRest {
          * 
          * @return type
          */
-        protected function _execute( $function, $vars=null, $method='GET', $auth=null ){
+        public function _execute( $function, $vars=null, $method='GET', $auth=null ){
             
             $xml = $this->_curl($function, $vars, $method, $auth);
             
